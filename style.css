@@ -1,0 +1,322 @@
+:root {
+  --color1: orange;
+  --color2: rgb(185, 185, 185);
+  --color3: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: var(--color2);
+
+  /* outline: 1px solid red; */
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content,
+.logo {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/* left side */
+
+.picture {
+  background-image: url(./image/bg-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+
+
+.logo {
+  height: auto;
+  background-color: rgba(65, 64, 62, 0.7);
+  position: relative;
+  top: 20vh;
+  gap: 1vw;
+  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.whale {
+  height: 40vh;
+}
+
+/* right side */
+
+.right {
+  width: 50%;
+  /* background-color: #000000; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.left {
+  padding-left: 3vw;
+}
+
+.dummy-text>p {
+  font-weight: 500;
+  width: 90%;
+  font-size: 1.2rem;
+  color: var(--color1);
+}
+
+.remote-text {
+  margin: 40px 0 80px;
+  color: var(--color1);
+}
+
+
+/* form */
+
+.form {
+  box-shadow: 10px 10px 60px rgba(251, 160, 2, 0.3);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--color1);
+}
+
+.input {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color1);
+}
+
+.form-title {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color1);
+}
+
+input {
+  /* background-color: rgb(2, 2, 2); */
+  border: 1px solid var(--color1);
+  border-radius: 3px;
+  height: 25px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--color1);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color1);
+  font-weight: 700;
+  font-size: 1.2em;
+  border: 2px solid var(--color1);
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin: 40px 0;
+}
+
+button:hover {
+  background-color: var(--color1);
+  color: var(--color3);
+}
+
+.log-in {
+  display: flex;
+  gap: 5px;
+}
+
+p {
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color1);
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--color2);
+}
+
+@media only screen and (max-width: 850px) {
+  .content {
+    flex-flow: column;
+    height: auto;
+    text-align: center;
+  }
+
+  p {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picture {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-size: 100vw;
+    background-size: cover;
+  }
+
+  .logo {
+    width: 100vw;
+    position: static;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .right {
+    width: auto;
+    height: auto;
+  }
+
+  .dummy-text {
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .left {
+    padding: 10px 20px;
+  }
+
+  .remote-text p {
+    padding: 20px 0;
+    margin: auto;
+  }
+
+  .form {
+    flex-flow: column nowrap;
+    align-items: center;
+
+  }
+
+  .input {
+    text-align: left;
+    width: auto;
+    font-size: 0.9em;
+    justify-content: center;
+    align-items: rigth;
+  }
+
+  input {
+    font-size: 0.9rem;
+    height: 1.5rem;
+    width: 70vw;
+  }
+
+  .button,
+  .log-in {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  button {
+    margin-bottom: 0px;
+    width: 60vw;
+    padding: 10px 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-flow: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .picture {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+  }
+
+  p {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100vw;
+    position: static;
+    gap: 10px;
+  }
+
+  .right {
+    width: auto;
+    height: auto;
+  }
+
+  .dummy-text {
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .dummy-text>p {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .left {
+    padding: 10px 20px;
+  }
+
+  .remote-text {
+    padding: 20px 0;
+    margin: auto;
+  }
+
+  .form {
+    flex-flow: column nowrap;
+    align-items: center;
+
+  }
+
+  .input {
+    text-align: left;
+    width: auto;
+    font-size: 0.9em;
+    justify-content: center;
+    align-items: rigth;
+  }
+
+  input {
+    font-size: 0.9rem;
+    height: 1.5rem;
+    width: 70vw;
+  }
+
+  .button,
+  .log-in {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  button {
+    margin-bottom: 0px;
+    width: 60vw;
+    padding: 10px 5px;
+  }
+
+}
